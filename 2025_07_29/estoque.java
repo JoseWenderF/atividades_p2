@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class estoque {
 
     private String nome;
-    private int valor;
+    private double valor;
     private int quantidade;
 
-    public estoque(String nome, int valor, int quantidade){
+    public estoque(String nome, double valor, int quantidade){
         this.nome = nome;
         this.valor = valor;
         this.quantidade = quantidade;
@@ -42,7 +42,7 @@ public class estoque {
         System.out.print("Name: ");
         String nome = entrada.nextLine();
         System.out.print("Prince: ");
-        int valor = entrada.nextInt();
+        double valor = entrada.nextDouble();
         System.out.print("Quantity in stock: ");
         int quantidade = entrada.nextInt();
         int cont = 0;
