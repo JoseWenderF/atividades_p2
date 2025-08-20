@@ -5,6 +5,7 @@ public class Main
 {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
+        System.out.print("Enter the number of tax payers: ");
         int cont = entrada.nextInt();
 		ArrayList<pessoa> listaPessoas = new ArrayList<>();
 
@@ -17,9 +18,9 @@ public class Main
 		
 		
 		for (int i = 0; i < cont; i++){
+            System.out.print("\nTax payer #" + (i+1) + " data:\n");
 		    System.out.print("Indivisual or company (i/c)? ");
 		    tipo = entrada.next();
-		    
 		    if (tipo.equals("i")){
 		        System.out.print("Name: ");
 		        name = entrada.next();
@@ -34,7 +35,7 @@ public class Main
 		    }
             else{
                 System.out.print("Name: ");
-		        name = entrada.nextLine();
+		        name = entrada.next();
 		        System.out.print("Anual income: ");
 		        anualIncome = entrada.nextDouble();
 		        System.out.print("Number of employees: ");
@@ -44,9 +45,10 @@ public class Main
 
                 listaPessoas.add(novaPessoa);
             }
-		    
+		    System.out.print("\n");
 		}
 
+        System.out.print("\nTaxes Paid:\n");
         pessoa p;
         for (int i = 0; i < cont; i++){
             p = listaPessoas.get(i);
@@ -61,5 +63,8 @@ public class Main
             }
         }
 		
+        System.out.printf("\nTotal Taxes: $ %.2f%n", total);
+
+        entrada.close();
 	}
 }

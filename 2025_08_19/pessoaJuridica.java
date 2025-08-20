@@ -18,10 +18,10 @@ public class pessoaJuridica extends pessoa{
         double taxAmount;
         
         if (employees > 10){
-            taxAmount = anualIncome * 0.16;
+            taxAmount = anualIncome * 0.14;
         }
         else{
-            taxAmount = anualIncome * 0.14;
+            taxAmount = anualIncome * 0.16;
         }
         return taxAmount;
     }
