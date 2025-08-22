@@ -37,4 +37,8 @@ public class account {
     public double getLimit(){
         return this.limit;
     }
+
+    public void deposit(double amount){
+        this.balance += amount;
+    }
 }
